@@ -35,6 +35,10 @@ export interface Producer {
   joinedYear: number;
   productsCount: number;
   rating: number;
+  /** Position en pourcentage (0-100) sur la carte stylisée du Kef */
+  coords: { x: number; y: number };
+  productType: string;
+  productEmoji: string;
 }
 
 export interface Product {
@@ -66,11 +70,14 @@ export const producers: Producer[] = [
     joinedYear: 2023,
     productsCount: 4,
     rating: 4.9,
+    coords: { x: 58, y: 62 },
+    productType: "Huile d'olive",
+    productEmoji: "🫒",
   },
   {
     id: "p2",
     name: "Aïcha Trabelsi",
-    village: "Sakiet Sidi Youssef",
+    village: "Tajerouine",
     photo: producerAicha,
     shortBio: "Apicultrice & herboriste de montagne",
     story:
@@ -78,6 +85,9 @@ export const producers: Producer[] = [
     joinedYear: 2023,
     productsCount: 3,
     rating: 5.0,
+    coords: { x: 42, y: 70 },
+    productType: "Miel",
+    productEmoji: "🍯",
   },
   {
     id: "p3",
@@ -90,6 +100,39 @@ export const producers: Producer[] = [
     joinedYear: 2024,
     productsCount: 5,
     rating: 4.8,
+    coords: { x: 38, y: 38 },
+    productType: "Artisanat",
+    productEmoji: "🧺",
+  },
+  {
+    id: "p4",
+    name: "Salma Gharbi",
+    village: "Kalaat Senan",
+    photo: producerLeila,
+    shortBio: "Artisane des fibres naturelles",
+    story:
+      "À Kalaat Senan, Salma confectionne paniers, tapis et objets décoratifs à partir de fibres locales. Elle anime des ateliers pour transmettre son savoir-faire aux jeunes filles du village.",
+    joinedYear: 2024,
+    productsCount: 4,
+    rating: 4.7,
+    coords: { x: 22, y: 50 },
+    productType: "Artisanat",
+    productEmoji: "🧶",
+  },
+  {
+    id: "p5",
+    name: "Mariem Khelifi",
+    village: "Dahmani",
+    photo: producerFatma,
+    shortBio: "Spécialiste du couscous traditionnel",
+    story:
+      "Mariem roule chaque grain de couscous à la main, selon la recette de sa mère. Sa coopérative regroupe 8 femmes de Dahmani et fournit aujourd'hui plusieurs restaurants de la région.",
+    joinedYear: 2024,
+    productsCount: 2,
+    rating: 4.9,
+    coords: { x: 70, y: 48 },
+    productType: "Couscous",
+    productEmoji: "🌾",
   },
 ];
 
@@ -121,7 +164,7 @@ export const products: Product[] = [
     unit: "500g",
     image: honey,
     producerId: "p2",
-    village: "Sakiet Sidi Youssef",
+    village: "Tajerouine",
     description:
       "Miel ambré récolté dans les montagnes du Kef. Goût intense de thym, propriétés naturelles reconnues.",
     story:
@@ -175,7 +218,7 @@ export const products: Product[] = [
     unit: "100g",
     image: herbs,
     producerId: "p2",
-    village: "Sakiet Sidi Youssef",
+    village: "Tajerouine",
     description:
       "Romarin, thym et menthe sauvages séchés naturellement. Cueillette éthique.",
     story:
@@ -232,9 +275,9 @@ export const products: Product[] = [
 
 export const villages = [
   "Dahmani",
-  "Sakiet Sidi Youssef",
-  "Nebeur",
   "Tajerouine",
+  "Nebeur",
+  "Kalaat Senan",
   "Le Kef",
   "Jérissa",
 ];

@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import Layout from "@/components/layout/Layout";
 import ProductCard from "@/components/ProductCard";
 import ProducerCard from "@/components/ProducerCard";
+import ProducersMap from "@/components/ProducersMap";
 import { products, producers, categories, impactStats } from "@/data/mockData";
 import { useNavigate } from "react-router-dom";
 import heroImg from "@/assets/hero-women.jpg";
@@ -132,6 +133,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* MAP OF PRODUCERS */}
+      <ProducersMap />
 
       {/* PRODUCERS */}
       <section className="container-soft py-16">
