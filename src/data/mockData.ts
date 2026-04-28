@@ -164,7 +164,7 @@ export const products: Product[] = [
     unit: "500g",
     image: honey,
     producerId: "p2",
-    village: "Sakiet Sidi Youssef",
+    village: "Tajerouine",
     description:
       "Miel ambré récolté dans les montagnes du Kef. Goût intense de thym, propriétés naturelles reconnues.",
     story:
@@ -218,7 +218,7 @@ export const products: Product[] = [
     unit: "100g",
     image: herbs,
     producerId: "p2",
-    village: "Sakiet Sidi Youssef",
+    village: "Tajerouine",
     description:
       "Romarin, thym et menthe sauvages séchés naturellement. Cueillette éthique.",
     story:
@@ -275,7 +275,7 @@ export const products: Product[] = [
 
 export const villages = [
   "Dahmani",
-  "Sakiet Sidi Youssef",
+  "Tajerouine",
   "Nebeur",
   "Tajerouine",
   "Le Kef",
