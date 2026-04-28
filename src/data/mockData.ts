@@ -277,7 +277,7 @@ export const villages = [
   "Dahmani",
   "Tajerouine",
   "Nebeur",
-  "Tajerouine",
+  "Kalaat Senan",
   "Le Kef",
   "Jérissa",
 ];
